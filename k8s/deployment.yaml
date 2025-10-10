@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: hellok8s
-        image: henrsand/hellok8s:latest  # Replace with your actual image
+        image: henrsand/hellok8s:latest:33e67983c62fa851cde8209d5e13de3d6c783bfe
         ports:
         - containerPort: 80
         livenessProbe:
