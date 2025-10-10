@@ -16,16 +16,16 @@ spec:
       - name: hellok8s
         image: henrsand/hellok8s:latest  # Replace with your actual image
         ports:
-        - containerPort: 3000
+        - containerPort: 80
         livenessProbe:
           httpGet:
             path: /
-            port: 3000
+            port: 80
           initialDelaySeconds: 10
           periodSeconds: 5
         readinessProbe:
           httpGet:
             path: /
-            port: 3000
+            port: 80
           initialDelaySeconds: 5
           periodSeconds: 5
