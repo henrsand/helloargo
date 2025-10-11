@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hellok8s
+  name: fibapi
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: hellok8s
+      app: fibapi
   template:
     metadata:
       labels:
-        app: hellok8s
+        app: fibapi
     spec:
       containers:
-      - name: hellok8s
+      - name: fibapi
         image: henrsand/fibapi:eebe65ac3f1cabb7f09567d006da6adb2e57b1a6
         ports:
         - containerPort: 80
