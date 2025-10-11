@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: hellok8s
-        image: henrsand/hellok8s:c52850cb9966fb67a7970681fc499a1a4f13ee12
+        image: henrsand/fibapi:eebe65ac3f1cabb7f09567d006da6adb2e57b1a6
         ports:
         - containerPort: 80
         livenessProbe:
