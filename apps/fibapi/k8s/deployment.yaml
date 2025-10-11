@@ -16,7 +16,7 @@ spec:
       - name: fibapi
         image: henrsand/fibapi:eebe65ac3f1cabb7f09567d006da6adb2e57b1a6
         ports:
-        - containerPort: 80
+        - containerPort: 8000
         livenessProbe:
           httpGet:
             path: /
