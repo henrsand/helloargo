@@ -1,0 +1,18 @@
+# fibapi/k8s/ingress.yaml
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: fibapi
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: fibapi.local
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: fibapi
+            port:
+              number: 80  # adjust to your fibapi port
