@@ -1,17 +1,25 @@
-# ingress.yaml
+# k8s/ingress/ingress.yaml
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: hellok8s
+  name: app-ingress
   namespace: hellok8s
-  annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   ingressClassName: nginx
   rules:
   - host: hellok8s.local
     http:
       paths:
+      # API routes to backend (keep /api prefix)
+      - path: /api
+        pathType: Prefix
+        backend:
+          service:
+            name: fibapi
+            port:
+              number: 80
+      
+      # Everything else to frontend
       - path: /
         pathType: Prefix
         backend:
