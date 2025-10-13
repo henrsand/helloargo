@@ -1,4 +1,3 @@
-# k8s/ingress/ingress.yaml
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
@@ -12,9 +11,9 @@ spec:
   - host: hellok8s.local
     http:
       paths:
-      # API routes to backend (keep /api prefix)
+      # API routes to backend (strip /api prefix)
       - path: /api(/|$)(.*)
-        athType: ImplementationSpecific
+        pathType: ImplementationSpecific
         backend:
           service:
             name: fibapi
