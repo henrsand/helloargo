@@ -11,8 +11,8 @@ spec:
     http:
       paths:
       # API routes to backend (keep /api prefix)
-      - path: /api
-        pathType: Prefix
+      - path: /api(/|$)(.*)
+        athType: ImplementationSpecific
         backend:
           service:
             name: fibapi
