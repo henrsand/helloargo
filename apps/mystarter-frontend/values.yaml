@@ -2,7 +2,7 @@ name: mystarter-frontend
 
 image:
   repository: henrsand/mystarter-frontend
-  tag: "81f2545f0f7055baf54cb643c4fca2033bf88e0c"
+  tag: "6f5e39fa2fbfc347026e5e3a2ac160dfe38d4e89"
 
 replicas: 2
 
