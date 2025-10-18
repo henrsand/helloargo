@@ -2,7 +2,7 @@ name: hellok8s
 
 image:
   repository: henrsand/mystarter-frontend
-  tag: "latest"
+  tag: "81f2545f0f7055baf54cb643c4fca2033bf88e0c"
 
 replicas: 2
 
