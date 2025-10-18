@@ -15,6 +15,9 @@ spec:
       containers:
       - name: hellok8s
         image: henrsand/hellok8s:ca40409328f47482a71497803c6a0657d5d4e096
+        envFrom:
+        - configMapRef:
+            name: hellok8s-config
         ports:
         - containerPort: 80
         livenessProbe:
