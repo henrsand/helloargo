@@ -1,4 +1,4 @@
-name: hellok8s
+name: mystarter-frontend
 
 image:
   repository: henrsand/mystarter-frontend
