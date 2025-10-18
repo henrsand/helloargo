@@ -8,8 +8,11 @@ spec:
   
   source:
     repoURL: https://github.com/henrsand/helloargo  # Your Git repo
-    targetRevision: main  # or master, depending on your default branch
-    path: apps/fibapi/k8s             # path where deployment.yaml and service.yaml live
+    targetRevision: HEAD
+    path: charts/generic-app
+    helm:
+      valueFiles:
+      - ../../apps/fibapi/values.yaml
     
   destination:
     server: https://kubernetes.default.svc

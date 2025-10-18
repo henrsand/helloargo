@@ -1,0 +1,35 @@
+name: ""
+replicas: 2
+
+image:
+  repository: ""
+  tag: "latest"
+
+containerPort: 8080
+
+service:
+  port: 80
+  targetPort: null  # defaults to containerPort if not set
+  type: ClusterIP
+
+resources:
+  requests:
+    memory: "128Mi"
+    cpu: "100m"
+  limits:
+    memory: "256Mi"
+    cpu: "200m"
+
+probes:
+  liveness:
+    path: /health
+    port: 8000
+    initialDelaySeconds: 20
+    periodSeconds: 5
+  readiness:
+    path: /health
+    port: 8000
+    initialDelaySeconds: 15
+    periodSeconds: 5
+
+configMap: null

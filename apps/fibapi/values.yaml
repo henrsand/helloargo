@@ -1,0 +1,35 @@
+name: fibapi
+
+image:
+  repository: henrsand/fibapi
+  tag: bda3ffba9f47edcd31d86e28e83180588f0d85bd
+
+replicas: 2
+
+containerPort: 8000
+
+service:
+  port: 80
+  targetPort: 8000
+
+resources:
+  requests:
+    memory: "128Mi"
+    cpu: "100m"
+  limits:
+    memory: "256Mi"
+    cpu: "200m"
+
+probes:
+  liveness:
+    path: /health
+    port: 8000
+    initialDelaySeconds: 20
+    periodSeconds: 5
+  readiness:
+    path: /health
+    port: 8000
+    initialDelaySeconds: 15
+    periodSeconds: 5
+
+# No configMap needed for fibapi
