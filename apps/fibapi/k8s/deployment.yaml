@@ -17,6 +17,13 @@ spec:
         image: henrsand/fibapi:bda3ffba9f47edcd31d86e28e83180588f0d85bd
         ports:
         - containerPort: 8000
+        resources:
+          requests:
+            memory: "128Mi"
+            cpu: "100m"
+          limits:
+            memory: "256Mi"
+            cpu: "200m"
         livenessProbe:
           httpGet:
             path: /health
