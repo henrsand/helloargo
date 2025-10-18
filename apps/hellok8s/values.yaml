@@ -2,7 +2,7 @@ name: hellok8s
 
 image:
   repository: henrsand/hellok8s
-  tag: ca40409328f47482a71497803c6a0657d5d4e096
+  tag: "4c7c4f67c72a99c58a92adfe1f8b82d68b011c7c"
 
 replicas: 2
 
